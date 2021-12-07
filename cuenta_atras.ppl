@@ -1,0 +1,25 @@
+clear
+print "Explotando en..."
+sleep 1
+
+clear
+print "Explotando en..."
+print "3"
+sleep 1
+
+clear
+print "Explotando en..."
+print "2"
+sleep 1
+
+clear
+print "Explotando en..."
+print "1"
+sleep 1
+
+clear
+print "BOOOM!!"
+sleep 1
+clear
+
+print "Tranquilo era broma :)"
