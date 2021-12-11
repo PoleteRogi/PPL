@@ -24,7 +24,6 @@ class Function:
 def run(code, lines):
     details = code.split(' ')
     command = details[0]
-    lastfuncname = ''
     if code.startswith('//'):
         return ''
     if command == 'exit':
@@ -80,20 +79,7 @@ def run(code, lines):
         return '&clear:NONE'
     elif ':' in code:
         lastfuncname = code.split(':')[0]
-        return ''
-    elif code == '.':
-        infunc = False
-        funclines = []
-        for line in lines:
-            if infunc:
-                funclines.append(line)
-            if ':' in line:
-                infunc = True
-            if line == '.':
-                infunc = False
-                break
-        func = Function(lastfuncname, funclines)
-        functions.append(func)
+        isinfunc = True
         return ''
     elif command == 'exec':
         for func in functions:
